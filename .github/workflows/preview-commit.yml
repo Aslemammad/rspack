@@ -25,16 +25,16 @@ jobs:
             runner: ${{ needs.get-runner-labels.outputs.LINUX_RUNNER_LABELS }}
           - target: aarch64-unknown-linux-musl
             runner: ${{ needs.get-runner-labels.outputs.LINUX_RUNNER_LABELS }}
-          # - target: i686-pc-windows-msvc
-          #   runner: ${{ needs.get-runner-labels.outputs.WINDOWS_RUNNER_LABELS }}
-          # - target: x86_64-pc-windows-msvc
-          #   runner: ${{ needs.get-runner-labels.outputs.WINDOWS_RUNNER_LABELS }}
-          # - target: aarch64-pc-windows-msvc
-          #   runner: ${{ needs.get-runner-labels.outputs.WINDOWS_RUNNER_LABELS }}
-          # - target: x86_64-apple-darwin
-          #   runner: ${{ needs.get-runner-labels.outputs.MACOS_RUNNER_LABELS }}
-          # - target: aarch64-apple-darwin
-          #   runner: ${{ needs.get-runner-labels.outputs.MACOS_RUNNER_LABELS }}
+          - target: i686-pc-windows-msvc
+            runner: ${{ needs.get-runner-labels.outputs.WINDOWS_RUNNER_LABELS }}
+          - target: x86_64-pc-windows-msvc
+            runner: ${{ needs.get-runner-labels.outputs.WINDOWS_RUNNER_LABELS }}
+          - target: aarch64-pc-windows-msvc
+            runner: ${{ needs.get-runner-labels.outputs.WINDOWS_RUNNER_LABELS }}
+          - target: x86_64-apple-darwin
+            runner: ${{ needs.get-runner-labels.outputs.MACOS_RUNNER_LABELS }}
+          - target: aarch64-apple-darwin
+            runner: ${{ needs.get-runner-labels.outputs.MACOS_RUNNER_LABELS }}
     uses: ./.github/workflows/reusable-build.yml
     with:
       target: ${{ matrix.array.target }}
@@ -68,4 +68,4 @@ jobs:
         run: ls -R npm
 
       - name: Release
-        run: pnpm dlx pkg-pr-new@https://9c821939.stackblitz-cr.pages.dev/stackblitz-labs/pkg.pr.new/pkg-pr-new@227 publish --compact --pnpm './npm/*' './crates/node_binding' './packages/rspack'
+        run: pnpm dlx pkg-pr-new@https://9533ba4f.stackblitz-cr.pages.dev/stackblitz-labs/pkg.pr.new/pkg-pr-new@227 publish --compact --pnpm './npm/*' './crates/node_binding' './packages/rspack'
