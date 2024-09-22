@@ -69,6 +69,6 @@ jobs:
 
       - name: Release
         
-        run: pnpm dlx pkg-pr-new@https://d7654273.stackblitz-cr.pages.dev/stackblitz-labs/pkg.pr.new/pkg-pr-new@227 publish --compact --pnpm './npm/*' './crates/node_binding' './packages/rspack'
+        run: pnpm dlx pkg-pr-new@https://c5f77d95.stackblitz-cr.pages.dev/stackblitz-labs/pkg.pr.new/pkg-pr-new@227 publish --compact --pnpm './npm/*' './crates/node_binding' './packages/rspack'
         
 
